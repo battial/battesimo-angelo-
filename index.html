@@ -1,0 +1,1305 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Battesimo di Angelo Battista | 3 Gennaio 2027</title>
+
+    <!-- Google Fonts: Great Vibes, Cinzel, Cormorant Garamond, Montserrat -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,600&family=Great+Vibes&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Tailwind Custom Configuration -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        skySoft: '#dceaf5',
+                        skyWatercolor: '#8db4d2',
+                        dustyBlue: '#385e7d',
+                        deepBlue: '#27455e',
+                        ivoryPaper: '#fdfbf7',
+                        warmCream: '#f7f3eb',
+                        goldFoil: '#c9a96e',
+                        goldLight: '#e5cf9f',
+                        goldDark: '#a68549',
+                    },
+                    fontFamily: {
+                        script: ['"Great Vibes"', 'cursive'],
+                        serifHead: ['"Cinzel"', 'serif'],
+                        serifBody: ['"Cormorant Garamond"', 'serif'],
+                        sansClean: ['"Montserrat"', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* Base paper texture & watercolor ambiance */
+        :root {
+            --sky-watercolor: #8db4d2;
+            --sky-soft: #dceaf5;
+            --ivory-paper: #fdfbf7;
+            --dusty-blue: #385e7d;
+            --gold-foil: #c9a96e;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background-color: #eef5fb;
+            background-image:
+                radial-gradient(circle at 12% 15%, rgba(141, 180, 210, 0.35) 0%, transparent 45%),
+                radial-gradient(circle at 88% 20%, rgba(220, 234, 245, 0.65) 0%, transparent 50%),
+                radial-gradient(circle at 80% 85%, rgba(141, 180, 210, 0.3) 0%, transparent 48%),
+                radial-gradient(circle at 15% 80%, rgba(201, 169, 110, 0.14) 0%, transparent 45%),
+                linear-gradient(180deg, #f3f8fc 0%, #fdfbf7 50%, #ebf3fa 100%);
+            color: var(--dusty-blue);
+            min-height: 100vh;
+            overflow-x: hidden;
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        /* Subtle paper grain overlay using CSS gradients (no base64) */
+        .paper-card {
+            background-color: var(--ivory-paper);
+            background-image:
+                radial-gradient(circle at 0% 0%, rgba(220, 234, 245, 0.55) 0%, transparent 38%),
+                radial-gradient(circle at 100% 100%, rgba(220, 234, 245, 0.55) 0%, transparent 40%),
+                radial-gradient(circle at 100% 15%, rgba(201, 169, 110, 0.08) 0%, transparent 30%),
+                repeating-linear-gradient(
+                    45deg,
+                    rgba(201, 169, 110, 0.015) 0px,
+                    rgba(201, 169, 110, 0.015) 1px,
+                    transparent 1px,
+                    transparent 4px
+                );
+            box-shadow:
+                0 25px 60px -15px rgba(56, 94, 125, 0.18),
+                0 8px 20px -6px rgba(201, 169, 110, 0.15),
+                inset 0 0 0 1px rgba(201, 169, 110, 0.25);
+        }
+
+        /* Metallic Gold Shimmer Text */
+        .gold-text-shimmer {
+            background: linear-gradient(120deg, #a68549 0%, #c9a96e 35%, #ecd6a8 50%, #c9a96e 65%, #a68549 100%);
+            background-size: 200% auto;
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            animation: shimmer 6s linear infinite;
+        }
+
+        @keyframes shimmer {
+            to {
+                background-position: 200% center;
+            }
+        }
+
+        /* =========================================
+           3D ENVELOPE OPENING ANIMATION STYLES
+           ========================================= */
+        .envelope-scene {
+            perspective: 1400px;
+        }
+
+        .envelope-wrapper {
+            position: relative;
+            width: min(90vw, 420px);
+            aspect-ratio: 1.42 / 1;
+            margin: 0 auto;
+            cursor: pointer;
+            transition: transform 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+            transform-style: preserve-3d;
+        }
+
+        .envelope-wrapper:hover:not(.is-open) {
+            transform: translateY(-6px) scale(1.015);
+        }
+
+        /* Envelope Back Base */
+        .envelope-back {
+            position: absolute;
+            inset: 0;
+            border-radius: 14px;
+            background: linear-gradient(145deg, #c6ddef 0%, #dceaf5 55%, #b8d3e8 100%);
+            box-shadow:
+                0 28px 55px -12px rgba(56, 94, 125, 0.28),
+                0 10px 24px -8px rgba(56, 94, 125, 0.15),
+                inset 0 0 0 1.5px rgba(255, 255, 255, 0.65);
+            overflow: hidden;
+        }
+
+        /* Inner lined pattern inside envelope */
+        .envelope-liner {
+            position: absolute;
+            inset: 6px;
+            border-radius: 10px;
+            background:
+                radial-gradient(circle at 50% 20%, rgba(253, 251, 247, 0.9), rgba(220, 234, 245, 0.6)),
+                repeating-linear-gradient(
+                    -45deg,
+                    rgba(201, 169, 110, 0.08) 0px,
+                    rgba(201, 169, 110, 0.08) 2px,
+                    transparent 2px,
+                    transparent 10px
+                );
+            border: 1px solid rgba(201, 169, 110, 0.3);
+        }
+
+        /* Preview Card Rising from Inside */
+        .envelope-letter-preview {
+            position: absolute;
+            left: 6%;
+            right: 6%;
+            bottom: 8%;
+            height: 84%;
+            background: linear-gradient(180deg, #fdfbf7 0%, #f8f4ec 100%);
+            border-radius: 10px;
+            border: 1px solid rgba(201, 169, 110, 0.45);
+            box-shadow: 0 6px 20px rgba(56, 94, 125, 0.12);
+            z-index: 15;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 1rem;
+            text-align: center;
+            transition: transform 1.05s cubic-bezier(0.22, 1, 0.36, 1) 0.35s, opacity 0.5s ease 0.9s;
+        }
+
+        .envelope-wrapper.is-open .envelope-letter-preview {
+            transform: translateY(-68%) scale(1.04);
+        }
+
+        /* Front Pocket (Left, Right, Bottom Folds) */
+        .envelope-pocket {
+            position: absolute;
+            inset: 0;
+            z-index: 20;
+            border-radius: 14px;
+            overflow: hidden;
+            pointer-events: none;
+        }
+
+        .envelope-pocket::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(160deg, #dceaf5 0%, #c8dfef 100%);
+            clip-path: polygon(0 0, 50% 54%, 0 100%);
+            filter: drop-shadow(2px 0 4px rgba(56, 94, 125, 0.08));
+        }
+
+        .envelope-pocket::after {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(200deg, #d5e6f3 0%, #bdd7eb 100%);
+            clip-path: polygon(100% 0, 50% 54%, 100% 100%);
+            filter: drop-shadow(-2px 0 4px rgba(56, 94, 125, 0.08));
+        }
+
+        .envelope-bottom-flap {
+            position: absolute;
+            inset: 0;
+            z-index: 22;
+            border-radius: 14px;
+            overflow: hidden;
+            pointer-events: none;
+        }
+
+        .envelope-bottom-flap::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(180deg, #e7f1f9 0%, #cfe2f1 100%);
+            clip-path: polygon(0 100%, 50% 46%, 100% 100%);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.7);
+        }
+
+        /* Gold trim on bottom flap */
+        .envelope-bottom-trim {
+            position: absolute;
+            inset: 0;
+            z-index: 23;
+            pointer-events: none;
+        }
+
+        /* Top Triangular Flap (3D Rotating) */
+        .envelope-top-flap {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 62%;
+            z-index: 30;
+            transform-origin: top center;
+            transition: transform 0.85s cubic-bezier(0.4, 0, 0.2, 1), z-index 0.1s linear 0.35s;
+            transform-style: preserve-3d;
+        }
+
+        .envelope-wrapper.is-open .envelope-top-flap {
+            transform: rotateX(180deg);
+            z-index: 10;
+        }
+
+        .flap-front {
+            position: absolute;
+            inset: 0;
+            backface-visibility: hidden;
+            -webkit-backface-visibility: hidden;
+            filter: drop-shadow(0 8px 12px rgba(56, 94, 125, 0.16));
+        }
+
+        .flap-back {
+            position: absolute;
+            inset: 0;
+            transform: rotateX(180deg);
+            backface-visibility: hidden;
+            -webkit-backface-visibility: hidden;
+        }
+
+        /* Embossed Gold Wax Seal */
+        .wax-seal {
+            position: absolute;
+            left: 50%;
+            top: 56%;
+            transform: translate(-50%, -50%);
+            z-index: 40;
+            width: 78px;
+            height: 78px;
+            border-radius: 50%;
+            background: radial-gradient(circle at 32% 28%, #f4e2b8 0%, #d4b475 35%, #b7924f 72%, #8e6c32 100%);
+            box-shadow:
+                0 10px 24px rgba(99, 73, 28, 0.38),
+                0 3px 8px rgba(56, 94, 125, 0.2),
+                inset 0 2px 5px rgba(255, 248, 225, 0.8),
+                inset 0 -3px 6px rgba(105, 76, 26, 0.55);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            transition: transform 0.45s ease, opacity 0.45s ease;
+        }
+
+        .wax-seal::before {
+            content: "";
+            position: absolute;
+            inset: 6px;
+            border-radius: 50%;
+            border: 1.5px solid rgba(255, 246, 218, 0.55);
+            box-shadow: inset 0 1px 4px rgba(112, 82, 30, 0.45);
+        }
+
+        .wax-seal-pulse {
+            position: absolute;
+            inset: -8px;
+            border-radius: 50%;
+            border: 1.5px solid rgba(201, 169, 110, 0.65);
+            animation: sealPulse 2.4s cubic-bezier(0.24, 0, 0.38, 1) infinite;
+            pointer-events: none;
+        }
+
+        @keyframes sealPulse {
+            0% {
+                transform: scale(0.95);
+                opacity: 0.85;
+            }
+            70% {
+                transform: scale(1.28);
+                opacity: 0;
+            }
+            100% {
+                transform: scale(1.28);
+                opacity: 0;
+            }
+        }
+
+        .envelope-wrapper.is-open .wax-seal {
+            transform: translate(-50%, -50%) scale(0.55);
+            opacity: 0;
+            pointer-events: none;
+        }
+
+        /* Stage Transitions */
+        .stage-hidden {
+            opacity: 0;
+            pointer-events: none;
+            transform: scale(0.96) translateY(20px);
+        }
+
+        .stage-visible {
+            opacity: 1;
+            pointer-events: auto;
+            transform: scale(1) translateY(0);
+        }
+
+        /* Subtle Reveal Animations for Invitation Sections */
+        .reveal-item {
+            opacity: 0;
+            transform: translateY(18px);
+            transition: opacity 0.85s cubic-bezier(0.22, 1, 0.36, 1), transform 0.85s cubic-bezier(0.22, 1, 0.36, 1);
+        }
+
+        .reveal-item.is-revealed {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Glassmorphic Countdown Boxes */
+        .countdown-box {
+            background: rgba(253, 251, 247, 0.78);
+            backdrop-filter: blur(8px);
+            -webkit-backdrop-filter: blur(8px);
+            border: 1px solid rgba(201, 169, 110, 0.5);
+            box-shadow: 0 8px 20px -6px rgba(56, 94, 125, 0.12);
+        }
+
+        /* Gentle Floating Animation */
+        @keyframes gentleFloat {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-6px); }
+        }
+
+        .float-slow {
+            animation: gentleFloat 4.5s ease-in-out infinite;
+        }
+
+        /* Custom subtle scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #eef5fb;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #b5cfe3;
+            border-radius: 9999px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #8db4d2;
+        }
+    </style>
+</head>
+<body class="font-sansClean antialiased selection:bg-skySoft selection:text-deepBlue">
+
+    <!-- Background & Celebration Particle Canvas -->
+    <canvas id="particleCanvas" class="fixed inset-0 w-full h-full pointer-events-none z-50"></canvas>
+
+    <!-- Floating Sound Toggle Button (Top Right) -->
+    <button
+        id="audioToggleBtn"
+        type="button"
+        aria-label="Attiva o disattiva audio"
+        class="fixed top-4 right-4 z-50 flex items-center gap-2 px-3.5 py-2.5 rounded-full bg-ivoryPaper/85 backdrop-blur-md border border-goldFoil/40 shadow-md text-dustyBlue hover:bg-ivoryPaper transition-all active:scale-95"
+    >
+        <span id="audioIconOn" class="hidden">
+            <svg class="w-4 h-4 text-goldDark" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M15.536 8.464a5 5 0 010 7.072m2.828-9.9a9 9 0 010 12.728M5.586 15H4a1 1 0 01-1-1v-4a1 1 0 011-1h1.586l4.707-4.707C10.923 3.663 12 4.109 12 5v14c0 .891-1.077 1.337-1.707.707L5.586 15z" />
+            </svg>
+        </span>
+        <span id="audioIconOff">
+            <svg class="w-4 h-4 text-dustyBlue/70" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M5.586 15H4a1 1 0 01-1-1v-4a1 1 0 011-1h1.586l4.707-4.707C10.923 3.663 12 4.109 12 5v14c0 .891-1.077 1.337-1.707.707L5.586 15z" />
+                <path stroke-linecap="round" stroke-linejoin="round" d="M17 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2" />
+            </svg>
+        </span>
+        <span id="audioLabel" class="text-[11px] font-medium tracking-wider uppercase hidden sm:inline">Suono</span>
+    </button>
+
+    <!-- =========================================================
+         STAGE 1: ANIMATED LUXURY ENVELOPE SCREEN
+         ========================================================= -->
+    <main id="envelopeStage" class="min-h-screen flex flex-col items-center justify-center px-4 py-12 relative z-10 transition-all duration-700">
+        <!-- Decorative Top Text -->
+        <div class="text-center mb-8 sm:mb-10 float-slow">
+            <p class="font-serifHead text-[11px] sm:text-xs tracking-[0.28em] uppercase text-dustyBlue/80 mb-2">
+                Un Giorno Speciale
+            </p>
+            <h1 class="font-script text-4xl sm:text-5xl text-dustyBlue drop-shadow-sm">
+                Angelo Battista
+            </h1>
+            <div class="flex items-center justify-center gap-3 mt-2">
+                <span class="h-[1px] w-10 bg-gradient-to-r from-transparent to-goldFoil"></span>
+                <svg class="w-3.5 h-3.5 text-goldFoil" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+                </svg>
+                <span class="h-[1px] w-10 bg-gradient-to-l from-transparent to-goldFoil"></span>
+            </div>
+        </div>
+
+        <!-- 3D Interactive Envelope -->
+        <div class="envelope-scene w-full flex justify-center">
+            <div
+                id="envelopeWrapper"
+                class="envelope-wrapper"
+                role="button"
+                tabindex="0"
+                aria-label="Tocca il sigillo per aprire l'invito al battesimo di Angelo Battista"
+            >
+                <!-- Back of Envelope -->
+                <div class="envelope-back">
+                    <div class="envelope-liner"></div>
+                </div>
+
+                <!-- Peeking Invitation Card -->
+                <div class="envelope-letter-preview">
+                    <div class="w-full h-full border border-goldFoil/35 rounded-md flex flex-col items-center justify-center px-3 py-2">
+                        <span class="font-serifHead text-[9px] tracking-[0.22em] text-dustyBlue/75 uppercase">Battesimo di</span>
+                        <span class="font-script text-3xl sm:text-4xl text-dustyBlue my-1">Angelo Battista</span>
+                        <span class="font-serifHead text-[10px] tracking-[0.2em] text-goldDark">3 GENNAIO 2027</span>
+                    </div>
+                </div>
+
+                <!-- Front Side Pockets -->
+                <div class="envelope-pocket"></div>
+
+                <!-- Bottom Folded Flap -->
+                <div class="envelope-bottom-flap"></div>
+
+                <!-- Subtle Gold Hairline on Bottom Flap -->
+                <svg class="envelope-bottom-trim w-full h-full" viewBox="0 0 420 296" preserveAspectRatio="none">
+                    <polyline points="2,294 210,137 418,294" fill="none" stroke="rgba(201,169,110,0.45)" stroke-width="1.2" />
+                </svg>
+
+                <!-- Top Rotating Flap -->
+                <div class="envelope-top-flap">
+                    <!-- Front of Flap -->
+                    <svg class="flap-front w-full h-full" viewBox="0 0 420 184" preserveAspectRatio="none">
+                        <defs>
+                            <linearGradient id="flapGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+                                <stop offset="0%" stop-color="#eaf3fa" />
+                                <stop offset="100%" stop-color="#c6ddf0" />
+                            </linearGradient>
+                        </defs>
+                        <path d="M 0,14 Q 0,0 14,0 L 406,0 Q 420,0 420,14 L 210,174 Z" fill="url(#flapGrad)" stroke="rgba(201,169,110,0.5)" stroke-width="1.2" />
+                    </svg>
+                    <!-- Back of Flap (Visible when opened) -->
+                    <svg class="flap-back w-full h-full" viewBox="0 0 420 184" preserveAspectRatio="none">
+                        <path d="M 0,14 Q 0,0 14,0 L 406,0 Q 420,0 420,14 L 210,174 Z" fill="#fdfbf7" stroke="rgba(201,169,110,0.4)" stroke-width="1.2" />
+                    </svg>
+                </div>
+
+                <!-- Embossed Gold Wax Seal -->
+                <div class="wax-seal" id="waxSeal">
+                    <div class="wax-seal-pulse"></div>
+                    <span class="font-serifHead font-semibold text-base tracking-widest text-[#fdf7e7] drop-shadow-[0_1px_1px_rgba(95,68,20,0.75)] leading-none">
+                        A.B.
+                    </span>
+                    <svg class="w-3 h-3 text-[#fdf7e7] mt-1 drop-shadow-[0_1px_1px_rgba(95,68,20,0.75)]" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+                    </svg>
+                </div>
+            </div>
+        </div>
+
+        <!-- Pulsing Prompt -->
+        <div class="mt-9 text-center">
+            <p class="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-ivoryPaper/80 border border-goldFoil/35 shadow-sm text-xs sm:text-sm font-medium text-dustyBlue animate-pulse">
+                <svg class="w-4 h-4 text-goldFoil" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M15 15l-2 5L9 9l11 4-5 2zm0 0l5 5M7.188 2.239l.777 2.897M5.136 7.965l-2.898-.777M13.95 4.05l-2.122 2.122m-5.657 5.656l-2.12 2.122" />
+                </svg>
+                Tocca il sigillo per aprire l'invito
+            </p>
+        </div>
+    </main>
+
+    <!-- =========================================================
+         STAGE 2: FULL LUXURY INTERACTIVE INVITATION
+         ========================================================= -->
+    <div id="invitationStage" class="hidden min-h-screen py-6 sm:py-12 px-3 sm:px-6 relative z-10 transition-all duration-700 stage-hidden">
+
+        <article class="paper-card max-w-2xl mx-auto rounded-[28px] relative overflow-hidden p-4 sm:p-8">
+
+            <!-- Inner Gold Double Ornamental Frame -->
+            <div class="border border-goldFoil/45 rounded-[22px] p-5 sm:p-10 relative">
+                <!-- Decorative Corner Gold Accents -->
+                <svg class="w-10 h-10 text-goldFoil/60 absolute top-2.5 left-2.5 pointer-events-none" viewBox="0 0 40 40" fill="none">
+                    <path d="M2 38 V12 C2 6 6 2 12 2 H38" stroke="currentColor" stroke-width="1.2"/>
+                    <circle cx="9" cy="9" r="2" fill="currentColor" opacity="0.6"/>
+                </svg>
+                <svg class="w-10 h-10 text-goldFoil/60 absolute top-2.5 right-2.5 rotate-90 pointer-events-none" viewBox="0 0 40 40" fill="none">
+                    <path d="M2 38 V12 C2 6 6 2 12 2 H38" stroke="currentColor" stroke-width="1.2"/>
+                    <circle cx="9" cy="9" r="2" fill="currentColor" opacity="0.6"/>
+                </svg>
+                <svg class="w-10 h-10 text-goldFoil/60 absolute bottom-2.5 left-2.5 -rotate-90 pointer-events-none" viewBox="0 0 40 40" fill="none">
+                    <path d="M2 38 V12 C2 6 6 2 12 2 H38" stroke="currentColor" stroke-width="1.2"/>
+                    <circle cx="9" cy="9" r="2" fill="currentColor" opacity="0.6"/>
+                </svg>
+                <svg class="w-10 h-10 text-goldFoil/60 absolute bottom-2.5 right-2.5 rotate-180 pointer-events-none" viewBox="0 0 40 40" fill="none">
+                    <path d="M2 38 V12 C2 6 6 2 12 2 H38" stroke="currentColor" stroke-width="1.2"/>
+                    <circle cx="9" cy="9" r="2" fill="currentColor" opacity="0.6"/>
+                </svg>
+
+                <!-- TOP DECORATIVE WATERCOLOR CROSS & BOTANICAL LEAVES SVG -->
+                <header class="text-center relative pt-2 pb-6 reveal-item">
+                    <div class="relative flex justify-center items-center mb-5">
+                        <svg class="w-52 sm:w-64 h-36 sm:h-40 overflow-visible" viewBox="0 0 260 160" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                            <defs>
+                                <radialGradient id="watercolorWash" cx="50%" cy="50%" r="50%">
+                                    <stop offset="0%" stop-color="#8db4d2" stop-opacity="0.35"/>
+                                    <stop offset="65%" stop-color="#dceaf5" stop-opacity="0.22"/>
+                                    <stop offset="100%" stop-color="#dceaf5" stop-opacity="0"/>
+                                </radialGradient>
+                                <linearGradient id="crossFill" x1="0%" y1="0%" x2="100%" y2="100%">
+                                    <stop offset="0%" stop-color="#dceaf5"/>
+                                    <stop offset="55%" stop-color="#9ec0dc"/>
+                                    <stop offset="100%" stop-color="#7da7c9"/>
+                                </linearGradient>
+                                <linearGradient id="leafBlue" x1="0%" y1="0%" x2="100%" y2="100%">
+                                    <stop offset="0%" stop-color="#b8d4ea"/>
+                                    <stop offset="100%" stop-color="#769fc1"/>
+                                </linearGradient>
+                                <linearGradient id="goldStroke" x1="0%" y1="0%" x2="100%" y2="100%">
+                                    <stop offset="0%" stop-color="#e5cf9f"/>
+                                    <stop offset="50%" stop-color="#c9a96e"/>
+                                    <stop offset="100%" stop-color="#a68549"/>
+                                </linearGradient>
+                            </defs>
+
+                            <!-- Soft Watercolor Halo -->
+                            <ellipse cx="130" cy="80" rx="95" ry="68" fill="url(#watercolorWash)" />
+
+                            <!-- Left Botanical Watercolor Leaves -->
+                            <g opacity="0.88">
+                                <path d="M112 118 C85 112, 62 96, 42 74" stroke="#7da3c2" stroke-width="1.3" stroke-linecap="round"/>
+                                <path d="M88 106 C75 94, 72 80, 82 72 C92 80, 95 94, 88 106 Z" fill="url(#leafBlue)" opacity="0.7"/>
+                                <path d="M70 96 C55 90, 48 78, 56 68 C67 74, 74 84, 70 96 Z" fill="url(#leafBlue)" opacity="0.6"/>
+                                <path d="M98 112 C86 122, 72 126, 62 118 C72 108, 86 105, 98 112 Z" fill="url(#leafBlue)" opacity="0.65"/>
+                                <path d="M56 84 C42 82, 34 72, 38 62 C50 66, 58 74, 56 84 Z" fill="url(#leafBlue)" opacity="0.5"/>
+                                <!-- Gold berry dots -->
+                                <circle cx="52" cy="58" r="2.2" fill="#c9a96e"/>
+                                <circle cx="74" cy="64" r="1.8" fill="#c9a96e"/>
+                                <circle cx="44" cy="96" r="2" fill="#c9a96e" opacity="0.8"/>
+                            </g>
+
+                            <!-- Right Botanical Watercolor Leaves -->
+                            <g opacity="0.88">
+                                <path d="M148 118 C175 112, 198 96, 218 74" stroke="#7da3c2" stroke-width="1.3" stroke-linecap="round"/>
+                                <path d="M172 106 C185 94, 188 80, 178 72 C168 80, 165 94, 172 106 Z" fill="url(#leafBlue)" opacity="0.7"/>
+                                <path d="M190 96 C205 90, 212 78, 204 68 C193 74, 186 84, 190 96 Z" fill="url(#leafBlue)" opacity="0.6"/>
+                                <path d="M162 112 C174 122, 188 126, 198 118 C188 108, 174 105, 162 112 Z" fill="url(#leafBlue)" opacity="0.65"/>
+                                <path d="M204 84 C218 82, 226 72, 222 62 C210 66, 202 74, 204 84 Z" fill="url(#leafBlue)" opacity="0.5"/>
+                                <!-- Gold berry dots -->
+                                <circle cx="208" cy="58" r="2.2" fill="#c9a96e"/>
+                                <circle cx="186" cy="64" r="1.8" fill="#c9a96e"/>
+                                <circle cx="216" cy="96" r="2" fill="#c9a96e" opacity="0.8"/>
+                            </g>
+
+                            <!-- Watercolor Cross with Gold Foil Outline -->
+                            <g>
+                                <path d="M120 22 H140 V54 H168 V74 H140 V132 H120 V74 H92 V54 H120 Z" fill="url(#crossFill)" stroke="url(#goldStroke)" stroke-width="1.8" stroke-linejoin="round"/>
+                                <!-- Inner delicate highlight -->
+                                <path d="M123.5 25.5 H136.5 V57.5 H164.5 V70.5 H136.5 V128.5 H123.5 V70.5 H95.5 V57.5 H123.5 Z" fill="none" stroke="rgba(255,255,255,0.55)" stroke-width="1"/>
+                            </g>
+
+                            <!-- Delicate White Blossoms at Base of Cross -->
+                            <g transform="translate(108, 108)">
+                                <circle cx="0" cy="-7" r="6" fill="#fdfbf7" stroke="#dceaf5" stroke-width="0.8"/>
+                                <circle cx="7" cy="-2" r="6" fill="#fdfbf7" stroke="#dceaf5" stroke-width="0.8"/>
+                                <circle cx="4" cy="6" r="6" fill="#fdfbf7" stroke="#dceaf5" stroke-width="0.8"/>
+                                <circle cx="-4" cy="6" r="6" fill="#fdfbf7" stroke="#dceaf5" stroke-width="0.8"/>
+                                <circle cx="-7" cy="-2" r="6" fill="#fdfbf7" stroke="#dceaf5" stroke-width="0.8"/>
+                                <circle cx="0" cy="0" r="3" fill="#e5cf9f"/>
+                            </g>
+                            <g transform="translate(152, 114) scale(0.82)">
+                                <circle cx="0" cy="-7" r="6" fill="#fdfbf7" stroke="#dceaf5" stroke-width="0.8"/>
+                                <circle cx="7" cy="-2" r="6" fill="#fdfbf7" stroke="#dceaf5" stroke-width="0.8"/>
+                                <circle cx="4" cy="6" r="6" fill="#fdfbf7" stroke="#dceaf5" stroke-width="0.8"/>
+                                <circle cx="-4" cy="6" r="6" fill="#fdfbf7" stroke="#dceaf5" stroke-width="0.8"/>
+                                <circle cx="-7" cy="-2" r="6" fill="#fdfbf7" stroke="#dceaf5" stroke-width="0.8"/>
+                                <circle cx="0" cy="0" r="3" fill="#e5cf9f"/>
+                            </g>
+                        </svg>
+                    </div>
+
+                    <!-- Exact Header Text -->
+                    <p class="font-serifHead text-xs sm:text-sm tracking-[0.2em] leading-relaxed text-dustyBlue uppercase max-w-md mx-auto">
+                        SIAMO FELICI DI INVITARVI AL BATTESIMO DI NOSTRO FIGLIO
+                    </p>
+
+                    <!-- Exact Name in Great Vibes -->
+                    <h1 class="font-script text-6xl sm:text-7xl text-dustyBlue mt-4 mb-3 leading-tight drop-shadow-[0_2px_10px_rgba(141,180,210,0.28)]">
+                        Angelo Battista
+                    </h1>
+
+                    <!-- Gold Divider with Heart -->
+                    <div class="flex items-center justify-center gap-3.5 my-5">
+                        <span class="h-[1px] w-16 sm:w-24 bg-gradient-to-r from-transparent via-goldFoil/70 to-goldFoil"></span>
+                        <svg class="w-4 h-4 text-skyWatercolor" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+                        </svg>
+                        <span class="h-[1px] w-16 sm:w-24 bg-gradient-to-l from-transparent via-goldFoil/70 to-goldFoil"></span>
+                    </div>
+
+                    <!-- Exact Parents Text -->
+                    <p class="font-serifHead text-xs sm:text-[13px] tracking-[0.14em] leading-7 text-dustyBlue/90 max-w-md mx-auto">
+                        CON GRANDE GIOIA <span class="font-semibold text-deepBlue">ALEX BATTISTA E IVA KALZIQI</span> VI INVITANO A CONDIVIDERE QUESTO GIORNO SPECIALE.
+                    </p>
+                </header>
+
+                <!-- DATE & TIME HIGHLIGHT BANNER -->
+                <section class="my-6 py-6 px-4 rounded-2xl bg-gradient-to-br from-skySoft/65 via-ivoryPaper to-skySoft/45 border border-goldFoil/35 text-center reveal-item">
+                    <p class="font-serifBody italic text-base sm:text-lg text-dustyBlue/85 mb-1">
+                        Domenica
+                    </p>
+                    <div class="flex flex-col sm:flex-row items-center justify-center gap-2 sm:gap-5">
+                        <span class="font-serifHead text-xl sm:text-2xl font-semibold tracking-[0.16em] text-deepBlue">
+                            3 GENNAIO 2027
+                        </span>
+                        <span class="hidden sm:inline-block w-1.5 h-1.5 rounded-full bg-goldFoil"></span>
+                        <span class="font-serifHead text-lg sm:text-xl font-medium tracking-[0.16em] gold-text-shimmer">
+                            ORE 10:30
+                        </span>
+                    </div>
+
+                    <!-- LIVE COUNTDOWN TIMER -->
+                    <div class="mt-6">
+                        <p class="text-[10px] sm:text-[11px] uppercase tracking-[0.22em] text-dustyBlue/70 mb-3 font-medium">
+                            Mancano al grande giorno
+                        </p>
+                        <div id="countdownGrid" class="grid grid-cols-4 gap-2 sm:gap-3.5 max-w-md mx-auto">
+                            <div class="countdown-box rounded-xl py-2.5 sm:py-3 px-1">
+                                <div id="cdDays" class="font-serifHead text-xl sm:text-2xl font-semibold text-deepBlue">--</div>
+                                <div class="text-[10px] uppercase tracking-widest text-dustyBlue/75 mt-0.5">Giorni</div>
+                            </div>
+                            <div class="countdown-box rounded-xl py-2.5 sm:py-3 px-1">
+                                <div id="cdHours" class="font-serifHead text-xl sm:text-2xl font-semibold text-deepBlue">--</div>
+                                <div class="text-[10px] uppercase tracking-widest text-dustyBlue/75 mt-0.5">Ore</div>
+                            </div>
+                            <div class="countdown-box rounded-xl py-2.5 sm:py-3 px-1">
+                                <div id="cdMinutes" class="font-serifHead text-xl sm:text-2xl font-semibold text-deepBlue">--</div>
+                                <div class="text-[10px] uppercase tracking-widest text-dustyBlue/75 mt-0.5">Minuti</div>
+                            </div>
+                            <div class="countdown-box rounded-xl py-2.5 sm:py-3 px-1">
+                                <div id="cdSeconds" class="font-serifHead text-xl sm:text-2xl font-semibold text-goldDark">--</div>
+                                <div class="text-[10px] uppercase tracking-widest text-dustyBlue/75 mt-0.5">Secondi</div>
+                            </div>
+                        </div>
+                        <p id="countdownFinishedMsg" class="hidden font-serifBody italic text-lg text-deepBlue mt-2">
+                            È arrivato il grande giorno! Auguri piccolo Angelo!
+                        </p>
+                    </div>
+
+                    <!-- ADD TO CALENDAR BUTTON (.ics download) -->
+                    <div class="mt-6">
+                        <button
+                            id="addToCalendarBtn"
+                            type="button"
+                            class="inline-flex items-center justify-center gap-2.5 px-6 py-3 rounded-full bg-ivoryPaper hover:bg-skySoft/50 text-deepBlue border border-goldFoil/60 shadow-sm hover:shadow transition-all active:scale-95 text-xs sm:text-sm font-medium tracking-wide"
+                        >
+                            <svg class="w-4 h-4 text-goldDark" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                            </svg>
+                            Aggiungi al Calendario
+                        </button>
+                        <p id="calendarFeedback" class="text-[11px] text-goldDark mt-2 h-4 opacity-0 transition-opacity duration-300">
+                            File calendario (.ics) scaricato!
+                        </p>
+                    </div>
+                </section>
+
+                <!-- INTERACTIVE LOCATION CARDS -->
+                <section class="my-8 grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-5 reveal-item">
+
+                    <!-- Card 1: La Cerimonia -->
+                    <div class="rounded-2xl bg-ivoryPaper/90 border border-skyWatercolor/40 p-5 sm:p-6 flex flex-col justify-between text-center shadow-sm hover:shadow-md transition-shadow">
+                        <div>
+                            <!-- Minimalist Church SVG Icon -->
+                            <div class="w-14 h-14 mx-auto mb-3.5 rounded-full bg-skySoft/75 border border-goldFoil/35 flex items-center justify-center text-dustyBlue">
+                                <svg class="w-7 h-7" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M12 2v4" />
+                                    <path d="M10.5 3.5h3" />
+                                    <path d="M12 6l5 4v10H7V10l5-4z" />
+                                    <path d="M7 13l-3 2v5h3" />
+                                    <path d="M17 13l3 2v5h-3" />
+                                    <path d="M10.5 20v-4a1.5 1.5 0 013 0v4" />
+                                </svg>
+                            </div>
+
+                            <h2 class="font-serifHead text-xs tracking-[0.22em] uppercase text-goldDark font-semibold mb-1.5">
+                                La Cerimonia
+                            </h2>
+                            <h3 class="font-serifBody italic text-2xl font-semibold text-deepBlue leading-snug mb-2">
+                                Chiesa di San Nicola
+                            </h3>
+                            <p class="text-xs sm:text-sm text-dustyBlue/85 leading-relaxed">
+                                Piazza San Nicola 21A, San Salvo (CH)
+                            </p>
+                            <p class="text-xs font-medium text-dustyBlue mt-1.5">
+                                Ore 10:30
+                            </p>
+                        </div>
+
+                        <div class="mt-5 pt-3 border-t border-skySoft">
+                            <a
+                                href="https://www.google.com/maps/search/?api=1&query=Chiesa+di+San+Nicola,+Piazza+San+Nicola+21A,+San+Salvo"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                class="w-full inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl bg-skySoft/70 hover:bg-skyWatercolor/35 text-deepBlue text-xs font-medium tracking-wide transition-colors"
+                            >
+                                <svg class="w-4 h-4 text-dustyBlue" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                                </svg>
+                                Apri su Google Maps
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Card 2: Il Ricevimento -->
+                    <div class="rounded-2xl bg-ivoryPaper/90 border border-skyWatercolor/40 p-5 sm:p-6 flex flex-col justify-between text-center shadow-sm hover:shadow-md transition-shadow">
+                        <div>
+                            <!-- Minimalist Olive Tree SVG Icon -->
+                            <div class="w-14 h-14 mx-auto mb-3.5 rounded-full bg-skySoft/75 border border-goldFoil/35 flex items-center justify-center text-dustyBlue">
+                                <svg class="w-7 h-7" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M12 21v-7" />
+                                    <path d="M9 21h6" />
+                                    <path d="M12 14c-2.5 0-4-1.5-4.5-3" />
+                                    <path d="M12 13c2.5 0 4-1.5 4.5-3" />
+                                    <path d="M12 14V9" />
+                                    <path d="M7.5 11.5C5.5 11.5 4 10 4 8c0-1.7 1.2-3.1 2.8-3.4C7.5 3.1 9.6 2 12 2s4.5 1.1 5.2 2.6C18.8 4.9 20 6.3 20 8c0 2-1.5 3.5-3.5 3.5" />
+                                </svg>
+                            </div>
+
+                            <h2 class="font-serifHead text-xs tracking-[0.22em] uppercase text-goldDark font-semibold mb-1.5">
+                                Il Ricevimento
+                            </h2>
+                            <p class="text-[11px] text-dustyBlue/80 leading-relaxed mb-1">
+                                Al termine dei festeggiamenti proseguiamo a
+                            </p>
+                            <h3 class="font-serifBody italic text-2xl font-semibold text-deepBlue leading-snug mb-2">
+                                Colle degli Ulivi
+                            </h3>
+                            <p class="text-xs sm:text-sm text-dustyBlue/85 leading-relaxed">
+                                Strada Comunale del Bagni, 86038 Petacciato (CB)
+                            </p>
+                        </div>
+
+                        <div class="mt-5 pt-3 border-t border-skySoft">
+                            <a
+                                href="https://www.google.com/maps/search/?api=1&query=Colle+degli+Ulivi,+Strada+Comunale+del+Bagni,+86038+Petacciato+CB"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                class="w-full inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl bg-skySoft/70 hover:bg-skyWatercolor/35 text-deepBlue text-xs font-medium tracking-wide transition-colors"
+                            >
+                                <svg class="w-4 h-4 text-dustyBlue" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                                </svg>
+                                Apri su Google Maps
+                            </a>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- DELICATE GOLD SEPARATOR -->
+                <div class="flex items-center justify-center gap-3 my-8 reveal-item">
+                    <span class="h-[1px] w-16 bg-gradient-to-r from-transparent to-goldFoil/60"></span>
+                    <svg class="w-3.5 h-3.5 text-goldFoil" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+                    </svg>
+                    <span class="h-[1px] w-16 bg-gradient-to-l from-transparent to-goldFoil/60"></span>
+                </div>
+
+                <!-- PRIVATE CONFIRMATION NOTICE (NO INTERACTIVE FORM) -->
+                <section id="confirmationNotice" class="rounded-2xl bg-gradient-to-br from-skySoft/75 via-ivoryPaper to-skySoft/55 border-2 border-goldFoil/60 shadow-md px-5 py-8 sm:px-8 sm:py-10 text-center reveal-item">
+                    <!-- Decorative Envelope/Heart Badge -->
+                    <div class="w-14 h-14 mx-auto mb-4 rounded-full bg-ivoryPaper border border-goldFoil/50 shadow-sm flex items-center justify-center">
+                        <svg class="w-7 h-7 text-goldDark" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.6">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75" />
+                        </svg>
+                    </div>
+
+                    <p class="font-serifBody italic text-xl sm:text-2xl text-dustyBlue mb-2">
+                        È gradita una
+                    </p>
+
+                    <h2 class="font-serifHead text-2xl sm:text-3xl font-bold tracking-[0.14em] uppercase text-deepBlue leading-snug">
+                        CONFERMA IN PRIVATO
+                    </h2>
+
+                    <p class="font-serifBody italic text-xl sm:text-2xl text-dustyBlue mt-2 mb-3">
+                        entro il
+                    </p>
+
+                    <div class="inline-block px-6 py-3 rounded-2xl bg-ivoryPaper/95 border border-goldFoil/65 shadow-sm">
+                        <p class="font-serifHead text-2xl sm:text-4xl font-bold tracking-[0.12em] gold-text-shimmer leading-none">
+                            5 DICEMBRE 2026
+                        </p>
+                    </div>
+                </section>
+
+                <!-- CLOSING MESSAGE & REPLAY BUTTON -->
+                <footer class="text-center pt-8 pb-2 reveal-item">
+                    <p class="font-script text-4xl sm:text-5xl text-dustyBlue mb-2">
+                        Vi aspettiamo con gioia!
+                    </p>
+                    <div class="flex items-center justify-center gap-2 my-3">
+                        <svg class="w-4 h-4 text-skyWatercolor" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                            <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+                        </svg>
+                        <svg class="w-3.5 h-3.5 text-goldFoil" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                            <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+                        </svg>
+                    </div>
+                    <p class="font-serifHead text-[11px] tracking-[0.22em] text-goldDark uppercase mb-6">
+                        Alex, Iva &amp; il piccolo Angelo
+                    </p>
+
+                    <!-- Replay Envelope Opening Button -->
+                    <button
+                        id="replayEnvelopeBtn"
+                        type="button"
+                        class="inline-flex items-center gap-2 px-4 py-2 rounded-full text-[11px] uppercase tracking-widest text-dustyBlue/70 hover:text-deepBlue hover:bg-skySoft/50 border border-transparent hover:border-skyWatercolor/40 transition-all"
+                    >
+                        <svg class="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                        </svg>
+                        Rivedi apertura busta
+                    </button>
+                </footer>
+            </div>
+        </article>
+    </div>
+
+    <!-- =========================================================
+         JAVASCRIPT: AUDIO, PARTICLES, ENVELOPE, COUNTDOWN, ICS, RSVP
+         ========================================================= -->
+    <script>
+        (function () {
+            'use strict';
+
+            /* ---------------------------------------------------------
+               1. WEB AUDIO API: GENTLE SYNTHESIZED HARP / CHIME CHORD
+               --------------------------------------------------------- */
+            let audioCtx = null;
+            let isAudioEnabled = true;
+
+            const audioToggleBtn = document.getElementById('audioToggleBtn');
+            const audioIconOn = document.getElementById('audioIconOn');
+            const audioIconOff = document.getElementById('audioIconOff');
+
+            function updateAudioUI() {
+                if (isAudioEnabled) {
+                    audioIconOn.classList.remove('hidden');
+                    audioIconOff.classList.add('hidden');
+                } else {
+                    audioIconOn.classList.add('hidden');
+                    audioIconOff.classList.remove('hidden');
+                }
+            }
+            updateAudioUI();
+
+            audioToggleBtn.addEventListener('click', () => {
+                isAudioEnabled = !isAudioEnabled;
+                updateAudioUI();
+                if (isAudioEnabled) {
+                    playGentleChime([523.25, 659.25, 783.99]); // Soft C major confirmation chime
+                }
+            });
+
+            /**
+             * Synthesizes a delicate harp/celesta arpeggio using Web Audio API.
+             * @param {number[]} frequencies - Array of note frequencies in Hz.
+             */
+            function playGentleChime(frequencies = [261.63, 329.63, 392.00, 493.88, 587.33, 783.99]) {
+                if (!isAudioEnabled) return;
+                try {
+                    const AudioContextClass = window.AudioContext || window.webkitAudioContext;
+                    if (!AudioContextClass) return;
+
+                    if (!audioCtx) {
+                        audioCtx = new AudioContextClass();
+                    }
+                    if (audioCtx.state === 'suspended') {
+                        audioCtx.resume();
+                    }
+
+                    const now = audioCtx.currentTime;
+
+                    frequencies.forEach((freq, idx) => {
+                        const startTime = now + idx * 0.13;
+                        const duration = 2.4;
+
+                        // Main pure sine tone
+                        const osc = audioCtx.createOscillator();
+                        osc.type = 'sine';
+                        osc.frequency.setValueAtTime(freq, startTime);
+
+                        // Soft triangle overtone for harp warmth
+                        const oscOver = audioCtx.createOscillator();
+                        oscOver.type = 'triangle';
+                        oscOver.frequency.setValueAtTime(freq * 2, startTime);
+
+                        const gain = audioCtx.createGain();
+                        gain.gain.setValueAtTime(0.0001, startTime);
+                        gain.gain.exponentialRampToValueAtTime(0.075, startTime + 0.04);
+                        gain.gain.exponentialRampToValueAtTime(0.0001, startTime + duration);
+
+                        const gainOver = audioCtx.createGain();
+                        gainOver.gain.setValueAtTime(0.0001, startTime);
+                        gainOver.gain.exponentialRampToValueAtTime(0.015, startTime + 0.03);
+                        gainOver.gain.exponentialRampToValueAtTime(0.0001, startTime + duration * 0.6);
+
+                        osc.connect(gain);
+                        oscOver.connect(gainOver);
+                        gain.connect(audioCtx.destination);
+                        gainOver.connect(audioCtx.destination);
+
+                        osc.start(startTime);
+                        oscOver.start(startTime);
+                        osc.stop(startTime + duration + 0.05);
+                        oscOver.stop(startTime + duration + 0.05);
+                    });
+                } catch (err) {
+                    // Fail silently if browser blocks audio
+                    console.warn('Audio playback skipped:', err);
+                }
+            }
+
+            /* ---------------------------------------------------------
+               2. CANVAS: AMBIENT GOLD DUST, FLOATING HEARTS & SPARKLE BURST
+               --------------------------------------------------------- */
+            const canvas = document.getElementById('particleCanvas');
+            const ctx = canvas.getContext('2d');
+            let ambientParticles = [];
+            let burstParticles = [];
+            let canvasW = window.innerWidth;
+            let canvasH = window.innerHeight;
+
+            function resizeCanvas() {
+                const dpr = Math.min(window.devicePixelRatio || 1, 2);
+                canvasW = window.innerWidth;
+                canvasH = window.innerHeight;
+                canvas.width = canvasW * dpr;
+                canvas.height = canvasH * dpr;
+                canvas.style.width = canvasW + 'px';
+                canvas.style.height = canvasH + 'px';
+                ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+            }
+
+            function initAmbientParticles() {
+                ambientParticles = [];
+                const count = Math.min(Math.floor((canvasW * canvasH) / 28000), 36);
+                for (let i = 0; i < count; i++) {
+                    ambientParticles.push({
+                        x: Math.random() * canvasW,
+                        y: Math.random() * canvasH,
+                        size: Math.random() * 3 + 1.5,
+                        vx: (Math.random() - 0.5) * 0.25,
+                        vy: -(Math.random() * 0.35 + 0.12),
+                        alpha: Math.random() * 0.45 + 0.15,
+                        phase: Math.random() * Math.PI * 2,
+                        isHeart: Math.random() < 0.22,
+                        color: Math.random() < 0.55 ? '#c9a96e' : '#8db4d2'
+                    });
+                }
+            }
+
+            /**
+             * Spawns a celebratory burst of soft sky-blue & gold sparkles.
+             */
+            function triggerSparkleBurst(originX = canvasW / 2, originY = canvasH / 2, count = 65) {
+                const palette = ['#c9a96e', '#e5cf9f', '#8db4d2', '#b8d4ea', '#fdfbf7'];
+                for (let i = 0; i < count; i++) {
+                    const angle = Math.random() * Math.PI * 2;
+                    const speed = Math.random() * 5.2 + 1.6;
+                    burstParticles.push({
+                        x: originX,
+                        y: originY,
+                        vx: Math.cos(angle) * speed,
+                        vy: Math.sin(angle) * speed - 1.8,
+                        gravity: 0.065,
+                        drag: 0.982,
+                        size: Math.random() * 4.5 + 2,
+                        alpha: 1,
+                        decay: Math.random() * 0.012 + 0.008,
+                        rotation: Math.random() * Math.PI * 2,
+                        rotSpeed: (Math.random() - 0.5) * 0.12,
+                        shape: Math.random() < 0.28 ? 'heart' : (Math.random() < 0.55 ? 'star' : 'dot'),
+                        color: palette[Math.floor(Math.random() * palette.length)]
+                    });
+                }
+            }
+
+            function drawHeart(x, y, size, color, alpha, rot = 0) {
+                ctx.save();
+                ctx.translate(x, y);
+                ctx.rotate(rot);
+                ctx.globalAlpha = Math.max(0, alpha);
+                ctx.fillStyle = color;
+                ctx.beginPath();
+                const s = size * 0.7;
+                ctx.moveTo(0, s * 0.35);
+                ctx.bezierCurveTo(0, 0, -s, 0, -s, s * 0.65);
+                ctx.bezierCurveTo(-s, s * 1.25, 0, s * 1.65, 0, s * 2);
+                ctx.bezierCurveTo(0, s * 1.65, s, s * 1.25, s, s * 0.65);
+                ctx.bezierCurveTo(s, 0, 0, 0, 0, s * 0.35);
+                ctx.fill();
+                ctx.restore();
+            }
+
+            function drawSparkleStar(x, y, size, color, alpha, rot = 0) {
+                ctx.save();
+                ctx.translate(x, y);
+                ctx.rotate(rot);
+                ctx.globalAlpha = Math.max(0, alpha);
+                ctx.fillStyle = color;
+                ctx.beginPath();
+                for (let i = 0; i < 4; i++) {
+                    const a = (i * Math.PI) / 2;
+                    ctx.lineTo(Math.cos(a) * size, Math.sin(a) * size);
+                    ctx.lineTo(Math.cos(a + Math.PI / 4) * (size * 0.32), Math.sin(a + Math.PI / 4) * (size * 0.32));
+                }
+                ctx.closePath();
+                ctx.fill();
+                ctx.restore();
+            }
+
+            function animateParticles() {
+                ctx.clearRect(0, 0, canvasW, canvasH);
+
+                // Draw subtle floating ambient dust & hearts
+                for (const p of ambientParticles) {
+                    p.x += p.vx + Math.sin(p.phase) * 0.15;
+                    p.y += p.vy;
+                    p.phase += 0.015;
+
+                    if (p.y < -15) {
+                        p.y = canvasH + 15;
+                        p.x = Math.random() * canvasW;
+                    }
+                    if (p.x < -15) p.x = canvasW + 15;
+                    if (p.x > canvasW + 15) p.x = -15;
+
+                    const twinkle = p.alpha * (0.65 + 0.35 * Math.sin(p.phase * 2));
+                    if (p.isHeart) {
+                        drawHeart(p.x, p.y, p.size * 1.7, p.color, twinkle);
+                    } else {
+                        ctx.save();
+                        ctx.globalAlpha = twinkle;
+                        ctx.fillStyle = p.color;
+                        ctx.beginPath();
+                        ctx.arc(p.x, p.y, p.size, 0, Math.PI * 2);
+                        ctx.fill();
+                        ctx.restore();
+                    }
+                }
+
+                // Draw celebration sparkle bursts
+                for (let i = burstParticles.length - 1; i >= 0; i--) {
+                    const b = burstParticles[i];
+                    b.vx *= b.drag;
+                    b.vy = b.vy * b.drag + b.gravity;
+                    b.x += b.vx;
+                    b.y += b.vy;
+                    b.rotation += b.rotSpeed;
+                    b.alpha -= b.decay;
+
+                    if (b.alpha <= 0) {
+                        burstParticles.splice(i, 1);
+                        continue;
+                    }
+
+                    if (b.shape === 'heart') {
+                        drawHeart(b.x, b.y, b.size * 1.5, b.color, b.alpha, b.rotation);
+                    } else if (b.shape === 'star') {
+                        drawSparkleStar(b.x, b.y, b.size * 1.35, b.color, b.alpha, b.rotation);
+                    } else {
+                        ctx.save();
+                        ctx.globalAlpha = b.alpha;
+                        ctx.fillStyle = b.color;
+                        ctx.beginPath();
+                        ctx.arc(b.x, b.y, b.size * 0.75, 0, Math.PI * 2);
+                        ctx.fill();
+                        ctx.restore();
+                    }
+                }
+
+                requestAnimationFrame(animateParticles);
+            }
+
+            window.addEventListener('resize', () => {
+                resizeCanvas();
+                initAmbientParticles();
+            });
+
+            /* ---------------------------------------------------------
+               3. ENVELOPE OPENING & REPLAY LOGIC
+               --------------------------------------------------------- */
+            const envelopeStage = document.getElementById('envelopeStage');
+            const envelopeWrapper = document.getElementById('envelopeWrapper');
+            const invitationStage = document.getElementById('invitationStage');
+            const replayEnvelopeBtn = document.getElementById('replayEnvelopeBtn');
+            const revealItems = document.querySelectorAll('.reveal-item');
+
+            let isOpening = false;
+
+            function openEnvelope() {
+                if (isOpening) return;
+                isOpening = true;
+
+                // Play soft harp arpeggio
+                playGentleChime([261.63, 329.63, 392.00, 493.88, 587.33, 783.99]);
+
+                // Animate flap & card rising
+                envelopeWrapper.classList.add('is-open');
+
+                // Burst sparkles from center of envelope
+                const rect = envelopeWrapper.getBoundingClientRect();
+                const cx = rect.left + rect.width / 2;
+                const cy = rect.top + rect.height * 0.45;
+                setTimeout(() => triggerSparkleBurst(cx, cy, 75), 320);
+
+                // Transition smoothly to full invitation card
+                setTimeout(() => {
+                    envelopeStage.classList.add('stage-hidden');
+                }, 1150);
+
+                setTimeout(() => {
+                    envelopeStage.classList.add('hidden');
+                    invitationStage.classList.remove('hidden');
+                    window.scrollTo({ top: 0, behavior: 'instant' });
+
+                    requestAnimationFrame(() => {
+                        invitationStage.classList.remove('stage-hidden');
+                        invitationStage.classList.add('stage-visible');
+
+                        // Staggered reveal of invitation sections
+                        revealItems.forEach((item, index) => {
+                            setTimeout(() => {
+                                item.classList.add('is-revealed');
+                            }, 120 + index * 140);
+                        });
+                    });
+                }, 1550);
+            }
+
+            envelopeWrapper.addEventListener('click', openEnvelope);
+            envelopeWrapper.addEventListener('keydown', (e) => {
+                if (e.key === 'Enter' || e.key === ' ') {
+                    e.preventDefault();
+                    openEnvelope();
+                }
+            });
+
+            // Replay Envelope Button
+            replayEnvelopeBtn.addEventListener('click', () => {
+                invitationStage.classList.remove('stage-visible');
+                invitationStage.classList.add('stage-hidden');
+
+                setTimeout(() => {
+                    invitationStage.classList.add('hidden');
+                    revealItems.forEach((item) => item.classList.remove('is-revealed'));
+                    envelopeWrapper.classList.remove('is-open');
+                    envelopeStage.classList.remove('hidden');
+                    window.scrollTo({ top: 0, behavior: 'instant' });
+
+                    requestAnimationFrame(() => {
+                        envelopeStage.classList.remove('stage-hidden');
+                        isOpening = false;
+                    });
+                }, 450);
+            });
+
+            /* ---------------------------------------------------------
+               4. LIVE COUNTDOWN TIMER (3 GENNAIO 2027, 10:30 CET)
+               --------------------------------------------------------- */
+            const targetDate = new Date('2027-01-03T10:30:00+01:00').getTime();
+            const cdDays = document.getElementById('cdDays');
+            const cdHours = document.getElementById('cdHours');
+            const cdMinutes = document.getElementById('cdMinutes');
+            const cdSeconds = document.getElementById('cdSeconds');
+            const countdownGrid = document.getElementById('countdownGrid');
+            const countdownFinishedMsg = document.getElementById('countdownFinishedMsg');
+
+            function updateCountdown() {
+                const now = Date.now();
+                const diff = targetDate - now;
+
+                if (diff <= 0) {
+                    countdownGrid.classList.add('hidden');
+                    countdownFinishedMsg.classList.remove('hidden');
+                    return;
+                }
+
+                const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+                const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
+                const minutes = Math.floor((diff / (1000 * 60)) % 60);
+                const seconds = Math.floor((diff / 1000) % 60);
+
+                cdDays.textContent = String(days).padStart(2, '0');
+                cdHours.textContent = String(hours).padStart(2, '0');
+                cdMinutes.textContent = String(minutes).padStart(2, '0');
+                cdSeconds.textContent = String(seconds).padStart(2, '0');
+            }
+
+            updateCountdown();
+            setInterval(updateCountdown, 1000);
+
+            /* ---------------------------------------------------------
+               5. DYNAMIC .ICS CALENDAR FILE DOWNLOAD
+               --------------------------------------------------------- */
+            const addToCalendarBtn = document.getElementById('addToCalendarBtn');
+            const calendarFeedback = document.getElementById('calendarFeedback');
+
+            addToCalendarBtn.addEventListener('click', () => {
+                try {
+                    // January 3, 2027 from 10:30 to 18:00 CET (UTC+1 -> 09:30Z to 17:00Z)
+                    const icsLines = [
+                        'BEGIN:VCALENDAR',
+                        'VERSION:2.0',
+                        'PRODID:-//Battesimo Angelo Battista//IT',
+                        'CALSCALE:GREGORIAN',
+                        'METHOD:PUBLISH',
+                        'BEGIN:VEVENT',
+                        'UID:battesimo-angelo-battista-20270103@invito',
+                        'DTSTAMP:20261123T120000Z',
+                        'DTSTART:20270103T093000Z',
+                        'DTEND:20270103T170000Z',
+                        'SUMMARY:Battesimo di Angelo Battista',
+                        'DESCRIPTION:Con grande gioia Alex Battista e Iva Kalziqi vi invitano al Battesimo di Angelo Battista. Cerimonia presso la Chiesa di San Nicola (San Salvo) alle ore 10:30. A seguire ricevimento a Colle degli Ulivi (Strada Comunale del Bagni, 86038 Petacciato CB).',
+                        'LOCATION:Chiesa di San Nicola, Piazza San Nicola 21A, San Salvo',
+                        'END:VEVENT',
+                        'END:VCALENDAR'
+                    ];
+
+                    const blob = new Blob([icsLines.join('\r\n')], { type: 'text/calendar;charset=utf-8' });
+                    const url = URL.createObjectURL(blob);
+                    const link = document.createElement('a');
+                    link.href = url;
+                    link.setAttribute('download', 'Battesimo_Angelo_Battista.ics');
+                    document.body.appendChild(link);
+                    link.click();
+                    document.body.removeChild(link);
+                    setTimeout(() => URL.revokeObjectURL(url), 1000);
+
+                    calendarFeedback.classList.remove('opacity-0');
+                    setTimeout(() => calendarFeedback.classList.add('opacity-0'), 3200);
+                } catch (err) {
+                    console.error('Errore generazione calendario:', err);
+                }
+            });
+
+            /* ---------------------------------------------------------
+               6. INITIALIZE ON WINDOW LOAD
+               --------------------------------------------------------- */
+            window.onload = function () {
+                resizeCanvas();
+                initAmbientParticles();
+                animateParticles();
+            };
+        })();
+    </script>
+</body>
+</html>
